@@ -3,9 +3,13 @@ doctype html
 html(lang="nl")
   include pug/_head.pug
 
-  body
+  body  
     include pug/_header.pug
     
-    include pug/_portfolio.pug
-    
-    include pug/_about.pug
+    .site__container
+      
+      include pug/_portfolio.pug
+      
+      include pug/_about_us.pug
+      
+      include pug/_footer.pug

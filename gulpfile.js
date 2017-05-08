@@ -4,13 +4,20 @@ var
   browserSync = require('browser-sync').create(),
   pug = require('gulp-pug'),
   sass = require('gulp-sass');
+  sourcemaps = require('gulp-sourcemaps');
+  autoprefixer = require('gulp-autoprefixer');
+  cssnano = require('gulp-cssnano');
 
-  // to install - autoprefixer, plumber, sourcemaps, js concat and minify
+  // to install - ccsnano, js concat and minify
 
 // sass to css
 gulp.task('sass', function(){
   return gulp.src('src/main.scss')
-  .pipe(sass({outputStyle: 'expanded'}).on('error', sass.logError))
+  .pipe(sourcemaps.init())
+  .pipe(sass({outputStyle: 'expanded', includePaths: ['node_modules/susy/sass']}).on('error', sass.logError))
+  .pipe(autoprefixer({browsers: ['last 2 versions'], cascade: false}))
+  //.pipe(cssnano())
+  .pipe(sourcemaps.write())
   .pipe(gulp.dest('build/css'))
   .pipe(browserSync.stream());
 })
@@ -32,6 +39,9 @@ gulp.task('browser-sync', function() {
     });
 });
 
+// run tasks
+gulp.task('run', ['sass', 'pug', 'browser-sync']);
+
 // watch task
 gulp.task('watch', ['browser-sync', 'sass', 'pug'], function() {
    gulp.watch('src/main.scss', ['sass']);
@@ -39,5 +49,7 @@ gulp.task('watch', ['browser-sync', 'sass', 'pug'], function() {
    gulp.watch('src/index.pug', ['pug']);
    gulp.watch('src/pug/**/*.pug', ['pug']);
    //gulp.watch('src/js/**/*.js', browserSync.reload);
-   //gulp.watch('src/*.html', browserSync.reload);
 });
+
+// default task
+gulp.task('default', ['run', 'watch']);
