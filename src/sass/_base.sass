@@ -1,3 +1,9 @@
+@keyframes SlideInTop
+  0%
+    transform: translateY(-130px)
+  100%
+    transform: translateY(0)
+
 .clearfix:after
   content: ""
   display: table
@@ -5,7 +11,7 @@
 html
   font-size: 100%
 body
-  font-family: 'Raleway', Roboto, Arial, sans-serif
+  font-family: $raleway
   font-weight: normal
   line-height: 1.5
   -webkit-font-smoothing: antialiased
@@ -57,7 +63,7 @@ small
   font-size: 80%
   line-height: inherit
 h1, h2, h3, h4, h5, h6
-  font-family: 'Raleway', Roboto, Arial, sans-serif
+  font-family: $raleway
   font-style: normal
   font-weight: normal
   color: inherit
@@ -197,4 +203,4 @@ figure
 
 .site__container
   @include container(80em)
-  margin-top: 200px
+  margin-top: 100px

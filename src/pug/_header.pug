@@ -1,7 +1,16 @@
-.header
-  .contact
-    h1: a(href='#') Contact
+.header__mobile
   .logo
     a(href="/"): img(src='img/werkhuis-am.svg')
-  .ons-werk
-    h1: a(href='#') Ons werk
+  .nav__mobile
+    nav
+      ul
+        li: a(href='#') Ons werk
+        li: a(href='#') Contact
+.header
+  .header__wrapper
+    .header__div
+      h1: a(href="#") Ons werk
+    .header__div__logo
+      a(href="/"): img(src='img/werkhuis-am.svg')
+    .header__div
+      h1: a(href="#") Contact

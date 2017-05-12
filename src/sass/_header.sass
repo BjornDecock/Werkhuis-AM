@@ -1,32 +1,116 @@
 .header
+  display: none
+.header__mobile
   position: fixed
   top: 0
   left: 0
   width: 100%
+  z-index: 1
+  display: flex
+  align-items: center
+  justify-content: center
   background-color: #fff
-  padding-top: 30px
-  margin-bottom: 50px
-  height: 100px
-  transition: height 0.3s
+  border-bottom: 1px solid $lightgrey
+  animation: SlideInTop 0.75s ease-out
+  &:after
+    content: ""
+    display: table
+    clear: both
+  a
+    color: $fontcolor
 
 .logo
   float: left
-  width: 10%
+  width: 50%
+  height: 75px
   text-align: center
-  animation: SlideInTop 0.75s ease
+  box-sizing: border-box
+  border-right: 1px solid $lightgrey
+  padding-top: 15px
+  img
+    max-width: 75%
+    max-height: 75%
 
-.contact, .ons-werk
+.nav__mobile
   float: left
-  width: 40%
-  margin: 0 2% 0 3%
-  height: 100%
+  width: 50%
+  margin: 0
+  max-height: 100%
   text-align: center
-  animation: SlideInTop 1s ease
-  h1
-    font-size: 1.3em
-  a, a:visited
-    padding: 3px 11px 3px 7px
-    transition: all 0.25s
-  a:hover, a:active
-    background-color: $lightgrey
-    border-radius: 5px
+  box-sizing: border-box
+  nav
+    font-size: 1.1em
+    ul
+      list-style: none
+      margin: 0
+    li
+      padding-top: 3px
+    li:nth-child(1)
+      padding-bottom: 4px
+      border-bottom: 1px solid $lightgrey
+    a
+      font-size: 1em
+      padding: 4px
+
+@media (min-width: $tablet)
+  .header__mobile
+    display: none
+  .header
+    display: block
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    padding-top: 15px
+    background-color: #fff
+    border-bottom: 1px solid $lightgrey
+    .header__wrapper
+      display: flex
+      align-items: center
+      justify-content: center
+      width: 80%
+      margin: 0 auto
+      &:after
+        content: ""
+        display: table
+        clear: both
+      .header__div, .header__div__logo
+        box-sizing: border-box
+        text-align: center
+      .header__div__logo
+        width: 40%
+        height: 90px
+        padding-top: 10px
+        animation: SlideInTop 0.75s ease-out
+        img
+          max-width: 70%
+          max-height: 70%
+      .header__div
+        padding: 0 5%
+        width: 30%
+        animation: SlideInTop 0.9s ease-out
+        h1
+          font-size: 1.2em
+        a, a:visited
+          color: $fontcolor
+          padding: 5px 5px 3px 5px
+          display: inline-block
+          vertical-align: middle
+          transform: perspective(1px) translateZ(0)
+          box-shadow: 0 0 1px transparent
+          position: relative
+          overflow: hidden
+        a:before
+          content: ""
+          position: absolute
+          z-index: -1
+          left: 0
+          right: 100%
+          bottom: 0
+          background: $darkgrey
+          height: 2px
+          transition-property: right
+          transition-duration: 0.25s
+          transition-timing-function: ease-out
+        a:hover:before, a:focus:before, a:active:before
+          right: 0

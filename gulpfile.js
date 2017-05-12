@@ -15,7 +15,7 @@ gulp.task('sass', function(){
   return gulp.src('src/main.scss')
   .pipe(sourcemaps.init())
   .pipe(sass({outputStyle: 'expanded', includePaths: ['node_modules/susy/sass']}).on('error', sass.logError))
-  .pipe(autoprefixer({browsers: ['last 2 versions'], cascade: false}))
+  .pipe(autoprefixer({browsers: ['last 3 versions'], cascade: false}))
   //.pipe(cssnano())
   .pipe(sourcemaps.write())
   .pipe(gulp.dest('build/css'))
@@ -35,7 +35,8 @@ gulp.task('browser-sync', function() {
     browserSync.init({
         server: {
             baseDir: "./build"
-        }
+        },
+        notify: false
     });
 });
 
