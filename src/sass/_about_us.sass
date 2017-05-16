@@ -1,4 +1,20 @@
 .about_us
-  @include container()
+  @include container(100%)
+  background-color: $lightgrey
+  padding: 15px 0
 .about_us--info, .about_us--contact
-  @include span(6 of 12)
+  @include container(85%)
+.about_us--info
+  margin-bottom: 15px
+.architect
+  width: 30%
+  float: left
+  h4
+    margin: 5px 0 20px 0
+    text-align: center
+  img
+    border-radius: 50%
+    height: 100%
+    width: 100%
+.middle
+  margin: 0 5%
