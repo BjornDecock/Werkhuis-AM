@@ -118,6 +118,13 @@ a
 
   a img
     border: 0
+a.underline
+  color: $fontcolor
+  padding-bottom: 2px
+  border-bottom: 1px solid $lightgrey
+  transition: border-bottom 0.3s linear
+  &:hover, &:focus
+    border-bottom: 1px solid $fontcolor
 
 hr
   clear: both
@@ -201,8 +208,30 @@ figure
 .text-justify
   text-align: justify
 
+.icon
+  display: inline-block
+  width: 1em
+  height: 1em
+  stroke-width: 0
+  stroke: currentColor
+  fill: currentColor
+
+.inline-img
+  margin-right: 7px
+
+.indent-text
+  margin-left: 30px
+
+.inline-list
+  list-style: none
+  padding-left: 0
+  margin: 0 0 1rem 0
+  li
+    display: inline-block
+    margin-right: 1rem
+
 .site__container
-  @include container(80em)
+  @include container(100%)
   margin-top: 100px
   @media (min-width: $tablet)
     margin-top: 130px

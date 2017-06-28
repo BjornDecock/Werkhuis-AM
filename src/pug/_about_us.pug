@@ -1,23 +1,35 @@
 section.about_us
-  .about_us--info
-    h1 About us
-    p. 
-      Dit is een paragraaf met informatie over Werkhuis AM.
-      Er zal een korte inleiding komen over de architecten.
-    .architect 
-      img(src="img/profiel.jpg")
-      h4 Stephanie
-    .architect.middle
-      img(src="img/profiel.jpg")
-      h4 Stephanie    
-    .architect 
-      img(src="img/profiel.jpg")
-      h4 Stephanie
-  .about_us--contact
-    h1 Contact us
-    p info@werkhuis-am.be
-    p 09 333 33 33
-    p
-      | Werkhuisstraat 10
-      br
-      | 900 Gent
+  .about_us_wrapper
+    .about_us_wrapper-sub
+      .about_us--info
+        h1 About us
+        p.
+          Dit is een paragraaf met informatie over Werkhuis AM.
+          Er zal een korte inleiding komen over de architecten.
+        p.
+          Dit is een paragraaf met informatie over Werkhuis AM.
+          Er zal een korte inleiding komen over de architecten.
+      .about_us--architecten
+        h2 Werkhuis AM architecten 
+        .architect 
+          img(src="img/profiel.jpg")
+          h4 Stephanie Vercauteren
+        .architect
+          img(src="img/profiel.jpg")
+          h4 Stephanie  Vercauteren   
+        .architect 
+          img(src="img/profiel.jpg")
+          h4 Stephanie Vercauteren
+    .about_us--contact
+      h1 Contacteer ons
+      p
+        img(src="img/icon-mail.svg" width="24px" class="inline-img") 
+        a(href="mailto:info@werkhuis-am.be" alt="Mail ons" class="underline") info@werkhuis-am.be
+      p
+        img(src="img/icon-tel.svg" width="24px" class="inline-img") 
+        a(href="tel:093333333" alt="Contacteer ons" class="underline") 09 333 33 33
+      p
+        img(src="img/icon-home.svg" width="22px" class="inline-img")
+        | Werkhuisstraat 10
+        br
+        span.indent-text 900 Gent
