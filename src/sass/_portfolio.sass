@@ -3,7 +3,8 @@
   margin-bottom: 40px
 
 .portfolio__item
-  width: 100%
+  width: 90%
+  margin: 0 auto
   position: relative
   overflow: hidden
   margin-bottom: 30px
@@ -23,11 +24,11 @@
   bottom: 0
   left: 0
   box-sizing: border-box
-  padding: 7px 0 7px 10px
+  padding: 10px 0 7px 10px
   background-color: $lightgrey-opacity
 
   h2
-    font-size: 95%
+    font-size: 100%
     font-weight: bold
     margin: 0
     padding: 0
@@ -35,14 +36,21 @@
   p
     margin: 0
     padding: 0
-    display: none
+    font-size: 90%
 
 @media (min-width: $portfolio-bp-medium)
   .portfolio
     @include container(95%)
   .portfolio__item
-    @include span(6 of 12)
+    width: 44%
+    margin: 0 3% 30px 3%
+    float: left
+
 
 @media (min-width: $portfolio-bp-large)
   .portfolio__item
     @include span(4 of 12)
+
+@media (min-width: $portfolio-bp-xlarge)
+  .portfolio__item
+    @include span(3 of 12)

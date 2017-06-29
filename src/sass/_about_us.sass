@@ -1,46 +1,71 @@
 .about_us
   @include container(100%)
   background-color: $lightgrey
-  padding: 15px 0
+  padding: 25px 0 15px 0
 
 .about_us_wrapper
   @include container(95%)
 
-  .about_us_wrapper-sub
-    @include container(100%)
+  .about_us--info
+    @include span(100%)
     padding-bottom: 20px
     margin-bottom: 20px
     border-bottom: 1px solid $middlegrey
 
-    .about_us--info
+    .about_us--info-intro
       @include span(12 of 12)
-      margin-bottom: 20px
+      margin-bottom: 10px
+
+    .about_us--info-architecten
+      @include span(12 of 12)
 
       h2
-        margin-bottom: 25px
-    .about_us--architecten
-      @include span(12 of 12)
+        margin-bottom: 20px
 
     .architect
         @include span(4 of 12)
-          box-sizing: border-box
-        padding: 0 5px
+        box-sizing: border-box
+        padding: 0 10px
+        margin-bottom: 15px
         h4
           text-align: center
         img
           border-radius: 50%
           height: 100%
           width: 100%
+          margin-bottom: 10px
   .about_us--contact
     @include span(100%)
 
 @media (min-width: $about_us-bp-medium)
   .about_us_wrapper
-    .about_us_wrapper-sub
+    .about_us--info
       @include span(8 of 12)
         border-bottom: 0
-        border-right: 1px solid $middlegrey
         box-sizing: border-box
-        padding-right: 15px
+        padding-right: 20px
+        border-right: 1px solid $middlegrey
+    .about_us--contact
+      @include span(4 of 12)
+
+@media (min-width: $about_us-bp-large)
+  .about_us_wrapper
+    .about_us--info
+      border: 0
+      padding-right: 0
+      padding-bottom: 0
+      .about_us--info-intro
+        @include span(6 of 12)
+        box-sizing: border-box
+        padding-right: 10px
+      .about_us--info-architecten
+        @include span(6 of 12)
+          padding-left: 20px
+          padding-right: 20px
+          border-left: 1px solid $middlegrey
+          border-right: 1px solid $middlegrey
+          box-sizing: border-box
+        .architect
+          @include span(6 of 12)
     .about_us--contact
       @include span(4 of 12)
