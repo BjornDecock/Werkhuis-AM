@@ -7,10 +7,11 @@ html(lang="nl")
     include pug/_header.pug
     
     .site__container
-      .portfolio__container
       
-        include pug/page/_portfolio-info.pug
-        
-        include pug/page/_portfolio-content.pug
-        
-    include pug/_footer.pug
+      include pug/_portfolio.pug
+      
+      include pug/_about_us.pug
+      
+      include pug/_footer.pug
+    script(src="js/vendor.js")
+    script AOS.init({duration: 700,});
