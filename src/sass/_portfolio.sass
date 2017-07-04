@@ -1,9 +1,18 @@
+%container
+  margin-left: auto
+  margin-right: auto
+  &:after
+    content: " "
+    display: block
+    clear: both
+
 .portfolio
-  @include container(90%)
+  max-width: 95%
+  @extend %container
   margin-bottom: 40px
 
 .portfolio__item
-  width: 90%
+  width: 95%
   margin: 0 auto
   position: relative
   overflow: hidden
@@ -19,6 +28,7 @@
     color: $fontcolor
 
 .portfolio__item--info
+  display: none
   position: absolute
   width: 100%
   bottom: 0
@@ -53,11 +63,18 @@
 
 @media (min-width: $portfolio-bp-xlarge)
   .portfolio
-    @include container(80%)
+    max-width: 1300px
+    margin-left: auto
+    margin-right: auto
+    &:after
+      content: " "
+      display: block
+      clear: both
   .portfolio__item
-    @include span(3 of 12)
+    max-width: 325px
+    width: 325px
     box-sizing: border-box
-    padding: 0 20px
-    margin-bottom: 40px
+    padding: 0 25px 50px 25px
+    margin: 0
   .portfolio__item--info
     display: none

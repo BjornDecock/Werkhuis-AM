@@ -62,14 +62,15 @@
     top: 0
     left: 0
     width: 100%
-    padding-top: 15px
+    padding-top: 25px
+    padding-bottom: 15px
     background-color: #fff
     border-bottom: 1px solid $lightgrey
     .header__wrapper
       display: flex
       align-items: center
       justify-content: center
-      width: 80%
+      max-width: 92%
       margin: 0 auto
       &:after
         content: ""
@@ -77,9 +78,9 @@
         clear: both
       .header__div, .header__div__logo
         box-sizing: border-box
-        text-align: center
       .header__div__logo
         width: 40%
+        text-align: center
         height: 90px
         padding-top: 10px
         animation: SlideInTop 0.75s ease-out
@@ -87,7 +88,7 @@
           max-width: 75%
           max-height: 75%
       .header__div
-        padding: 0 5%
+        padding: 0 8px
         width: 30%
         animation: SlideInTop 0.9s ease-out
         h1
@@ -115,3 +116,42 @@
           transition-timing-function: ease-out
         a:hover:before, a:focus:before, a:active:before
           right: 0
+
+@media (min-width: $portfolio-bp-large)
+  .header
+    .header__wrapper
+      display: flex
+      align-items: center
+      justify-content: center
+      max-width: 93%
+      margin: 0 auto
+      &:after
+        content: ""
+        display: table
+        clear: both
+
+      .header__div
+        padding: 0
+
+@media (min-width: $portfolio-bp-xlarge)
+  .header
+    .header__wrapper
+      display: flex
+      align-items: center
+      justify-content: center
+      max-width: 1300px
+      margin: 0 auto
+      &:after
+        content: ""
+        display: table
+        clear: both
+
+      .header__div
+        padding-left: 25px
+
+      .head__div__right
+        padding-left: 0
+        padding-right: 25px
+
+        a
+          padding: 0
