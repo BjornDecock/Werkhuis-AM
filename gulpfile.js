@@ -16,7 +16,7 @@ gulp.task('sass', function(){
   .pipe(sourcemaps.init())
   .pipe(sass({outputStyle: 'expanded', includePaths: ['node_modules/susy/sass']}).on('error', sass.logError))
   .pipe(autoprefixer({browsers: ['last 3 versions'], cascade: false}))
-  //.pipe(cssnano())
+  .pipe(cssnano())
   .pipe(sourcemaps.write())
   .pipe(gulp.dest('build/css'))
   .pipe(browserSync.stream());

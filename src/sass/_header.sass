@@ -62,15 +62,15 @@
     top: 0
     left: 0
     width: 100%
-    padding-top: 25px
+    padding-top: 35px
     padding-bottom: 15px
     background-color: #fff
-    border-bottom: 1px solid $lightgrey
     .header__wrapper
       display: flex
-      align-items: center
-      justify-content: center
+      align-items: flex-start
+      justify-content: flex-start
       max-width: 92%
+      width: 92%
       margin: 0 auto
       &:after
         content: ""
@@ -82,76 +82,22 @@
         width: 40%
         text-align: center
         height: 90px
-        padding-top: 10px
         animation: SlideInTop 0.75s ease-out
         img
           max-width: 75%
           max-height: 75%
       .header__div
-        padding: 0 8px
         width: 30%
         animation: SlideInTop 0.9s ease-out
         h1
-          font-size: 1.2em
+          font-size: 1em
+          line-height: 1
         a, a:visited
           color: $fontcolor
-          padding: 5px 5px 3px 5px
           display: inline-block
           vertical-align: middle
-          transform: perspective(1px) translateZ(0)
-          box-shadow: 0 0 1px transparent
-          position: relative
-          overflow: hidden
-        a:before
-          content: ""
-          position: absolute
-          z-index: -1
-          left: 0
-          right: 100%
-          bottom: 0
-          background: $darkgrey
-          height: 2px
-          transition-property: right
-          transition-duration: 0.25s
-          transition-timing-function: ease-out
-        a:hover:before, a:focus:before, a:active:before
-          right: 0
-
-@media (min-width: $portfolio-bp-large)
-  .header
-    .header__wrapper
-      display: flex
-      align-items: center
-      justify-content: center
-      max-width: 93%
-      margin: 0 auto
-      &:after
-        content: ""
-        display: table
-        clear: both
-
-      .header__div
-        padding: 0
-
-@media (min-width: $portfolio-bp-xlarge)
-  .header
-    .header__wrapper
-      display: flex
-      align-items: center
-      justify-content: center
-      max-width: 1300px
-      margin: 0 auto
-      &:after
-        content: ""
-        display: table
-        clear: both
-
-      .header__div
-        padding-left: 25px
-
-      .head__div__right
-        padding-left: 0
-        padding-right: 25px
-
-        a
-          padding: 0
+          padding-bottom: 2px
+          transition: all .2s ease-in
+          border-bottom: 1px solid $basecolor
+          &:hover
+            border-bottom: 1px solid $fontcolor

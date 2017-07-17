@@ -1,16 +1,14 @@
 footer
   @include container(100%)
-  padding: 15px 0 10px 0
-  background-color: $darkgrey
-  color: $basecolor
+  padding: 0
   text-align: center
   font-size: 80%
-  img
-    width: 125px
-    height: auto
-    padding: 10px 0 20px 0
   a
-    color: $basecolor
+    color: $fontcolor
+    border-bottom: 1px solid $basecolor
+    padding-bottom: 2px
+    transition: all .2s ease-in
+    &:hover
+      border-bottom: 1px solid $fontcolor
   .small-koode
     font-size: 75%
-    color: $lightgrey-opacity

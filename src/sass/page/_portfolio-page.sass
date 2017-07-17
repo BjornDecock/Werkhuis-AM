@@ -1,20 +1,27 @@
 .portfolio__container
   @include container(80%)
 
+  h2
+    font-size: 1em
+    padding: 0 0 1px 0
+    margin: 0
+    border-bottom: 1px solid $middlegrey
+
+  p
+    font-size: .9em
+    padding: 0
+    margin: 0 0 20px 0
+
   .portfolio-info
     @include container(100%)
-    border-bottom: 1px solid $middlegrey
-    padding-bottom: 10px
     margin-bottom: 30px
 
   .portfolio-content
     @include container(100%)
     box-sizing: border-box
-    padding: 0 5px
+    padding: 0
 
     img
-      border-radius: 3px
-      box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4)
       margin-bottom: 30px
 
 @media (min-width: 1000px)
@@ -23,7 +30,7 @@
     .portfolio-info
       position: fixed
       width: 300px
-      padding-top: 100px
+      padding-top: 75px
     .portfolio-content
-      width: 500px
+      width: 550px
       margin-left: 350px

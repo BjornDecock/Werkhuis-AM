@@ -7,74 +7,73 @@
     clear: both
 
 .portfolio
-  max-width: 95%
+  max-width: 100%
+  width: 100%
   @extend %container
-  margin-bottom: 40px
 
 .portfolio__item
-  width: 95%
+  width: 100%
   margin: 0 auto
-  position: relative
-  overflow: hidden
   margin-bottom: 30px
-  //box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4)
+  position: relative
 
-  img
-    //border-radius: 3px
-    width: 100%
-    height: auto
-
-  a, a:active, a:hover, a:focus
+  a
     color: $fontcolor
 
+  img
+    width: 100%
+    height: auto
+    display: block
+
+  &:hover .portfolio__item--info
+    height: 35px
+
+
+  @media (min-width: $portfolio-bp-medium) and (max-width: $portfolio-bp-large - 1)
+    width: 45%
+    float: left
+    margin-left: 10%
+    margin-bottom: 10%
+    &:nth-child(2n-1)
+      margin-left: 0
+
+  @media (min-width: $portfolio-bp-large) and (max-width: $portfolio-bp-xlarge - 1)
+    width: 30%
+    float: left
+    margin-left: 5%
+    margin-bottom: 5%
+    &:nth-child(3n-2)
+      margin-left: 0
+
+  @media (min-width: $portfolio-bp-xlarge) and (max-width: $portfolio-bp-xxlarge - 1)
+    width: 20%
+    float: left
+    margin-left: 6.66667%
+    margin-bottom: 6.66667%
+    &:nth-child(4n-3)
+      margin-left: 0
+
+  @media (min-width: $portfolio-bp-xxlarge)
+    width: 17%
+    float: left
+    margin-left: 3.75%
+    margin-bottom: 3.75%
+    &:nth-child(5n-4)
+      margin-left: 0
+
 .portfolio__item--info
-  display: none
   position: absolute
-  width: 100%
-  bottom: 0
-  left: 0
   box-sizing: border-box
-  padding: 10px 0 7px 10px
-  background-color: $lightgrey-opacity
+  padding: 0 7px 0 7px
+  bottom: 0
+  overflow: hidden
+  height: 0
+  width: 100%
+  transition: .3s ease
+  color: $middlegrey
+  background-color: rgba(0, 0, 0, 0.4)
 
   h2
-    font-size: 100%
-    font-weight: bold
+    padding: 5px 0 0 0
     margin: 0
-    padding: 0
-
-  p
-    margin: 0
-    padding: 0
-    font-size: 90%
-
-@media (min-width: $portfolio-bp-medium)
-  .portfolio
-    @include container(95%)
-  .portfolio__item
-    width: 44%
-    margin: 0 3% 30px 3%
-    float: left
-
-
-@media (min-width: $portfolio-bp-large)
-  .portfolio__item
-    @include span(4 of 12)
-
-@media (min-width: $portfolio-bp-xlarge)
-  .portfolio
-    max-width: 1300px
-    margin-left: auto
-    margin-right: auto
-    &:after
-      content: " "
-      display: block
-      clear: both
-  .portfolio__item
-    max-width: 325px
-    width: 325px
-    box-sizing: border-box
-    padding: 0 25px 50px 25px
-    margin: 0
-  .portfolio__item--info
-    display: none
+    font-size: .9em

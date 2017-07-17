@@ -4,7 +4,7 @@
   padding: 25px 0 15px 0
 
 .about_us_wrapper
-  @include container(95%)
+  @include container(86%)
 
   .about_us--info
     @include span(100%)
@@ -41,16 +41,20 @@
 
     .about_us--info
       float: none
+      box-sizing: border-box
+      border-right: 1px solid $middlegrey
+      padding-right: 20px
 
     .about_us--architecten
       @include span(7 of 12)
       box-sizing: border-box
       border-bottom: 0
-      border-right: 1px solid $middlegrey
-      padding-right: 20px
 
     .about_us--contact
       @include span(5 of 12)
+      box-sizing: border-box
+      border-left: 1px solid $middlegrey
+      padding-left: 20px
 
 @media (min-width: $about_us-bp-large)
   .about_us_wrapper
